@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h2>Student Details</h2>
+
+
+        {% for i in data %}
+     
+            <p>Name: {{ i.name }}</p> 
+            <p>Contact: {{ i.contact }}</p>
+            <p>Email: {{ i.email }}</p>
+            <p>Degree: {{ i.degree }}</p>
+            <p>Course: {{ i.course }}</p>
+            
+                <a href="{% url 'update' i.id %}">
+                    <button>Edit</button>
+                </a>
+
+                <a href="{% url 'delete' i.id %}">
+                    <button>Delete</button>
+                </a>
+          
+
+        
+        {% endfor %}
+  
+
+
+{% endblock %}

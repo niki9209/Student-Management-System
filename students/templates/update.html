@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+
+    <label for="name">Name: </label>
+    <input type="text" id="name" name="name" value="{{user.name}}"> <br><br>
+
+    <label for="contact">Contact: </label>
+    <input type="tel" id="contact" name="contact"  value="{{user.contact}}"><br><br>
+
+    <label for="mail">Email: </label>
+    <input type="email" id="mail" name="mail" value="{{user.email}}"><br><br>
+
+    <label for="degree">Degree: </label>
+    <input type="text" id="degree" name="degree" value="{{user.degree}}" ><br><br>
+
+    <label for="course">Course </label>
+    <input type="text" id="course" name="course" value="{{user.course}}"><br><br>
+
+
+    <a href=""><button type="submit">Submit</button></a>
+    <a href=""><button type="reset">Clear</button></a>
+
+</form>
+
+
+{% endblock %}

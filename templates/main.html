@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+
+```
+<style>
+
+    body{
+        margin:0;
+       
+     
+    }
+
+    nav{
+        background-color:#84b3f0;
+        padding:15px;
+        display:flex;
+        justify-content:center;
+        gap:40px;
+    }
+
+    nav a{
+        text-decoration:none;
+        color:white;
+    }
+
+    nav a h2{
+        margin:0;
+        font-size:20px;
+    }
+
+    
+
+    .container{
+        width:90%;
+        margin:auto;
+        padding:20px;
+    }
+
+    h1{
+        text-align:center;
+        color:#1e3a5f;
+    }
+
+    h2{
+        color:#333;
+    }
+
+
+
+</style>
+
+
+</head>
+
+<body>
+
+```
+<nav>
+
+    <a href="{% url 'home' %}">
+        <h2>HOME</h2>
+    </a>
+
+    <a href="{% url 'display' %}">
+        <h2>DISPLAY</h2>
+    </a>
+
+    <a href="{% url 'help' %}">
+        <h2>HELP</h2>
+    </a>
+
+    <a href="{% url 'about' %}">
+        <h2>ABOUT</h2>
+    </a>
+
+</nav>
+
+<div class="container">
+
+    {% block content %}
+
+    {% endblock %}
+
+</div>
+```
+
+</body>
+</html>
